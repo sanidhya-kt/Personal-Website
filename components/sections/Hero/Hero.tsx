@@ -1,6 +1,12 @@
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import { HeroProps } from "./hero.types";
+import Image from "next/image";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+} from "react-icons/fa";
 
 export default function Hero({}: HeroProps) {
   return (
@@ -14,13 +20,13 @@ export default function Hero({}: HeroProps) {
               Hi, I'm
             </p>
 
-            <h1 className="mt-2 text-5xl lg:text-7xl font-bold text-white leading-tight">
-              Sanidhya Kumar <br />
+            <h1 className="mt-2 text-5xl lg:text-7xl font-extrabold leading-tight bg-gradient-to-r from-white via-blue-200 to-cyan-400 bg-clip-text text-transparent">
+                Sanidhya Kumar <br />
               Tiwari
             </h1>
 
             <h2 className="mt-4 text-2xl lg:text-3xl text-gray-300">
-              AI Engineer & Full Stack Developer
+              Software Engineer
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-gray-400">
@@ -30,6 +36,11 @@ export default function Hero({}: HeroProps) {
             </p>
 
             <div className="mt-10 flex gap-4">
+              <div className="mt-8 flex gap-6 text-2xl text-gray-400">
+  <FaGithub className="cursor-pointer hover:text-white transition" />
+  <FaLinkedin className="cursor-pointer hover:text-blue-400 transition" />
+  <FaEnvelope className="cursor-pointer hover:text-red-400 transition" />
+</div>
               <Button size="lg">
                 View Projects
               </Button>
@@ -41,13 +52,19 @@ export default function Hero({}: HeroProps) {
           </div>
 
           {/* Right Side */}
-          <div className="flex justify-center">
-            <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 p-1">
-              <div className="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-7xl">
-                👨‍💻
-              </div>
-            </div>
-          </div>
+          {/* Right Side */}
+<div className="relative flex justify-center">
+  <div className="absolute w-72 h-72 rounded-full bg-blue-500/20 blur-3xl"></div>
+
+  <Image
+    src="/images/profile.jpg"
+    alt="Sanidhya Kumar Tiwari"
+    width={350}
+    height={350}
+    priority
+    className="relative rounded-full object-cover border-4 border-slate-700 shadow-2xl"
+  />
+</div>
 
         </div>
       </Container>
