@@ -46,7 +46,7 @@ export default function Navbar({}: NavbarProps) {
         {/* Desktop Resume Button */}
         <div className="hidden md:block">
           <a
-            href="/resume.pdf"
+            href="//Sanidhya_Kumar_Tiwari_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
