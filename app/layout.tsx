@@ -2,18 +2,13 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Sanidhya Kumar Tiwari | Software Engineer | AI Engineer",
+  metadataBase: new URL("https://personal-website-nu-mocha-22.vercel.app"),
+
+  title: {
+    default: "Sanidhya Kumar Tiwari | Software Engineer | AI Engineer",
+    template: "%s | Sanidhya Kumar Tiwari",
+  },
 
   description:
     "Portfolio of Sanidhya Kumar Tiwari, an M.Tech Artificial Intelligence student at IIT Patna, showcasing software engineering, AI, machine learning, backend development, and full-stack projects.",
@@ -23,8 +18,8 @@ export const metadata: Metadata = {
     "Software Engineer",
     "AI Engineer",
     "Machine Learning Engineer",
-    "Full Stack Developer",
     "Backend Developer",
+    "Full Stack Developer",
     "Next.js",
     "React",
     "Node.js",
@@ -43,6 +38,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Sanidhya Kumar Tiwari",
+      url: "https://personal-website-nu-mocha-22.vercel.app",
     },
   ],
 
@@ -53,17 +49,29 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sanidhya Kumar Tiwari | Software Engineer | AI Engineer",
     description:
-      "Portfolio showcasing software engineering, AI, machine learning, and full-stack development projects.",
+      "Portfolio showcasing software engineering, AI, machine learning, backend development, and full-stack development projects.",
+    url: "https://personal-website-nu-mocha-22.vercel.app",
     siteName: "Sanidhya Portfolio",
     locale: "en_US",
     type: "website",
+
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sanidhya Kumar Tiwari Portfolio",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
     title: "Sanidhya Kumar Tiwari | Software Engineer | AI Engineer",
     description:
-      "Portfolio showcasing software engineering, AI, machine learning, and full-stack development projects.",
+      "Portfolio showcasing software engineering, AI, machine learning, backend development, and full-stack projects.",
+
+    images: ["/og-image.png"],
   },
 
   robots: {
@@ -72,25 +80,11 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
 
   category: "technology",
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
-        {children}
-      </body>
-    </html>
-  );
-}

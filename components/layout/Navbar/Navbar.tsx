@@ -26,7 +26,7 @@ export default function Navbar({}: NavbarProps) {
           href="#"
           className="text-2xl font-bold text-slate-100 transition duration-300 hover:text-primary"
         >
-          SANIDHYA.
+          SANIDHYA
         </a>
 
         {/* Desktop Navigation */}
