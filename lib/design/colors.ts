@@ -1,14 +1,12 @@
-import { DEFAULT_CIPHERS } from "tls";
-
 export const colors = {
-    background: {
-        primary: "#030712",
-        secondary: "#111827",
-        tertiary: "#1F2937",
-    },
+  background: {
+    primary: "#030712",
+    secondary: "#111827",
+    tertiary: "#1F2937",
+  },
 
-    text: {
-    primary: "#F9FAFB",
+  text: {
+    primary: "#ffffffc6",
     secondary: "#9CA3AF",
     muted: "#6B7280",
   },
@@ -30,4 +28,4 @@ export const colors = {
 
   warning: "#F59E0B",
 
-}as const;
+} as const;

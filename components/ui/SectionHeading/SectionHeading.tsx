@@ -6,7 +6,7 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <h2
-      className={`text-4xl md:text-5xl font-bold text-white mb-8 ${className}`}
+      className={`text-4xl md:text-5xl font-bold text-slate-100 mb-8 ${className}`}
     >
       {children}
     </h2>

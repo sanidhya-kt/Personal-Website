@@ -12,13 +12,13 @@ export default function Button({
     "rounded-xl font-medium transition-all duration-300 cursor-pointer";
 
   const variants = {
-    primary: "bg-blue-500 text-white hover:bg-blue-600",
+    primary: "bg-primary text-zinc-950 hover:bg-primary-hover shadow-lg shadow-primary/20",
 
-    secondary: "bg-gray-800 text-white hover:bg-gray-700",
+    secondary: "bg-slate-800 text-slate-200 hover:bg-slate-700",
 
-    outline: "border border-gray-600 text-white hover:bg-gray-800",
+    outline: "border border-slate-700 text-slate-200 hover:bg-slate-800/50 hover:border-slate-600",
 
-    ghost: "text-white hover:bg-gray-800",
+    ghost: "text-slate-300 hover:bg-slate-800/50 hover:text-white",
   };
 
   const sizes = {

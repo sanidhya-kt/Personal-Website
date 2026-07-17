@@ -3,7 +3,7 @@ import { FooterProps } from "./footer.types";
 
 export default function Footer({}: FooterProps) {
   return (
-    <footer className="border-t border-slate-800 bg-slate-950 text-gray-400">
+    <footer className="border-t border-card-border bg-background text-slate-400">
       <Container>
         <div className="flex flex-col md:flex-row items-center justify-between py-6">
 
@@ -17,7 +17,7 @@ export default function Footer({}: FooterProps) {
               href="https://github.com/sanidhya-kt"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition"
+              className="hover:text-slate-100 transition"
             >
               GitHub
             </a>
@@ -26,14 +26,14 @@ export default function Footer({}: FooterProps) {
               href="https://www.linkedin.com/in/sanidhya-kt/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition"
+              className="hover:text-slate-100 transition"
             >
               LinkedIn
             </a>
 
             <a
               href="mailto:sanidhya21iitp@gmail.com"
-              className="hover:text-white transition"
+              className="hover:text-slate-100 transition"
             >
               Gmail
             </a>
